@@ -1,5 +1,15 @@
 /* 
  * Express middleware to check if user is authenticated.
- * If user is logged in, continue calling the next() function.
- * If user is NOT logged in, redirect to /login
+ * If not logged in, redirect to /login.
+ * Otherwise, continue to the next() function.
  */
+const withAuth = (req, res, next) => {
+    if (!req.session.loggedIn) {
+      res.redirect('/login');
+    } else {
+      next();
+    }
+  };
+  
+  module.exports = withAuth;
+  
