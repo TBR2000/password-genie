@@ -1,33 +1,22 @@
 [
-    {
-      "name": "Emma",
-      "username": "emmas",
-      "email": "emma@sample.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Ben",
-      "username": "bens",
-      "email": "ben@sample.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Diana",
-      "username": "dianas",
-      "email": "diana@sample.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Pink",
-      "username": "pinks",
-      "email": "pink@sample.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Samantha",
-      "username": "samanthas",
-      "email": "samantha@sample.com",
-      "password": "password12345"
-    }
-  ]
-  
+  {
+    "username": "coder1",
+    "email": "mohit@gmail.com",
+    "password": "genie12345"
+  },
+  {
+    "username": "coder2",
+    "email": "tim@gmail.com",
+    "password": "genie12345"
+  },
+  {
+    "username": "coder3",
+    "email": "diana@gmail.com",
+    "password": "genie12345"
+  },
+  {
+    "username": "coder4",
+    "email": "nadja@gmail.com",
+    "password": "genie12345"
+  }
+]

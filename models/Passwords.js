@@ -12,10 +12,15 @@ Passwords.init(
             autoIncrement: true,
           },
 
-        password_for: {
+        website: {
             type: DataTypes.STRING,
             allowNull: false
-        },  
+        },
+
+        url: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
 
         user_name: {
             type: DataTypes.STRING,
