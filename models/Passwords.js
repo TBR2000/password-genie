@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr(process.env.KEY);
 
 class Passwords extends Model {}
 
@@ -41,6 +43,20 @@ Passwords.init(
           },          
     },
     {
+        hooks: {
+            beforeCreate: async () => {
+                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
+              return passwordData;
+            },
+            beforeUpdate: async () => {
+                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
+              return passwordData;
+            },
+            afterFind: async () => {
+                passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
+              return passwordData;
+            },
+          },
     sequelize,
     timestamps: true,
     freezeTableName: true,
