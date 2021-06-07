@@ -6,7 +6,7 @@ User.hasMany(Passwords,{
     onDelete: 'CASCADE',
 });
 
-Passwords.belongTo(User,{
+Passwords.belongsTo(User,{
     foreignKey: 'user_id',
 });
 
