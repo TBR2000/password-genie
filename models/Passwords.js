@@ -44,16 +44,16 @@ Passwords.init(
     },
     {
         hooks: {
-            beforeCreate: async () => {
-                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
+            beforeCreate: async (passwordData) => {
+              passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
               return passwordData;
             },
-            beforeUpdate: async () => {
-                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
+            beforeUpdate: async (passwordData) => {
+               passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
               return passwordData;
             },
-            afterFind: async () => {
-                passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
+            afterFind: async (passwordData) => {
+              passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
               return passwordData;
             },
           },
