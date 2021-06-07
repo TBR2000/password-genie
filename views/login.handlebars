@@ -1,5 +1,5 @@
 
-   <body>
+   {{!-- <body> --}}
       <div class="wrapper">
          <div class="title-text">
             <div class="title login">
@@ -18,17 +18,17 @@
                <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-               <form action="#" class="login">
+               <form action="#" class="login loginForm">
                   <div class="field">
-                     <input type="text" placeholder="Email/User Name" required>
+                     <input type="text" id="loginUserOrEmail" placeholder="Email/User Name" required>
                   </div>
                   <div class="field">
-                     <input type="password" placeholder="Password" required>
+                     <input type="password" id="loginPwd" placeholder="Password" required>
                   </div>
                   
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Login">
+                     <input type="submit" id="btnLoginSubmit" value="Login">
                   </div>
                   <div class="signup-link">
                      Not a User? <a href="">Register now</a>
@@ -52,6 +52,7 @@
             </div>
          </div>
       </div>
+      
       <script>
          const loginText = document.querySelector(".title-text .login");
          const loginForm = document.querySelector("form.login");
@@ -71,4 +72,6 @@
            return false;
          });
       </script>
-   </body>
+
+      <script src="/js/login.js"></script>
+   {{!-- </body> --}}
