@@ -12,12 +12,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // for (const password of passwordData) {
-  //   await Password.create({
-  //     ...password,
-  //     user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const password of passwordData) {
+    await Passwords.create({
+      ...password,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+     });
+   }
 
   process.exit(0);
 };
