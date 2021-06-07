@@ -2,15 +2,21 @@
  const Passwords = require ('../models');
 
 
-//GET password route (/)
-router.get('/', async (req, res) => {
-    try {
-      const passwordData = await Passwords.findAll();
-      res.status(200).json(passwordData);
-    } catch (err) {
-      res.status(500).json(err);
+//GET password by ID route (/:id)
+router.get('/:id', async (req, res) => {
+  try {
+    const passwordData = await Passwords.findByPk(req.params.id);
+
+    if (!passwordData) {
+      res.status(404).json({ message: 'No Passwords found with this id!' });
+      return;
     }
-  });
+
+    res.status(200).json(passwordData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //Add new password route (POST) (/)
 router.post('/', async (req,res) => {
