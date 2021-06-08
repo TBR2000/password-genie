@@ -1,11 +1,15 @@
  const router = require('express').Router();
- const Passwords = require ('../models');
+ const {Passwords} = require ('../models');
+ const Cryptr = require('cryptr');
+ const cryptr = new Cryptr(process.env.KEY);
+ 
 
 
 //GET password by ID route (/:id)
 router.get('/:id', async (req, res) => {
   try {
     const passwordData = await Passwords.findByPk(req.params.id);
+    passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
 
     if (!passwordData) {
       res.status(404).json({ message: 'No Passwords found with this id!' });

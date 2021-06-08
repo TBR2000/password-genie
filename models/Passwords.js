@@ -3,7 +3,11 @@ const sequelize = require('../config/connection');
 const Cryptr = require('cryptr');
 const cryptr = new Cryptr(process.env.KEY);
 
-class Passwords extends Model {}
+class Passwords extends Model {
+  decryptPasswords(passwordData) {
+    return cryptr.decrypt(passwordData)
+    }
+}
 
 Passwords.init(
     {
@@ -52,10 +56,10 @@ Passwords.init(
                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
               return passwordData;
             },
-            afterFind: async (passwordData) => {
-              passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
-              return passwordData;
-            },
+            //afterFind: async (passwordData) => {
+            //  passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
+            //  return passwordData;
+           // },
           },
     sequelize,
     timestamps: true,
