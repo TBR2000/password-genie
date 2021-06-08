@@ -22,17 +22,11 @@ router.get('/passwords', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
   //GET ALL Passwords and render the following page
   res.render('passwords');
 
-      const passwordData = await Passwords.findAll();
-      res.render('passwords');
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-});
-
+  
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');
