@@ -22,9 +22,10 @@ router.get('/passwords', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
   //GET ALL Passwords and render the following page
   res.render('passwords');
+});
+  
 
   
 router.get('/login', (req, res) => {
