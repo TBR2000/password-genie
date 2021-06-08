@@ -1,51 +1,57 @@
-<body>
-      <div class="wrapper">
-         <div class="title-text">
-            <div class="title login">
-               Edit Password
-            </div>
-           
-         </div>
-        
-            <div class="form-inner">
-               <form action="#" class="login">
-                   
-                  <div class="field">
-                    <div>Name</div>
-                     <input type="none">
-                  </div>
-                  <div class="field">
-                      <div>URL</div>
-                     <input type="none">
-                  </div>
-                  <div class="field">
-                    <div>User Name</div>
-                  <input type="none">
-               </div>
-                  <div class="field">
-                      <div>Password</div>
-                    <input type="none">
-                 </div>
-                 
-                  
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Generate new password">
-                  </div>
-                  
-                  
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Save">
-                  </div>
-
-                  <div class="field btn">
-                    <div class="btn-layer1"></div>
-                    <input type="submit" value="Cancel">
-                 </div>
-               </form>
-            </div>
-         </div>
+<div class="wrapper">
+   <div class="title-text">
+      <div class="title login">
+         Edit Password
       </div>
-    
-</body>
+   </div>
+        
+   <div class="form-inner">
+      <form action="#" class="login">
+         <div class="field">
+            <input type="hidden" name="password_id" value="{{passwords.id}}"/>
+         </div>
+
+         <div class="field">
+            <div>Name</div>
+            <input type="text" name="website" value="{{passwords.website}}" class="form-input"/>
+         </div>
+         
+         <div class="field">
+            <div>URL</div>
+            <input type="text" name="url" value="{{passwords.url}}" class="form-input"/>
+         </div>
+         
+         <div class="field">
+            <div>Username</div>
+            <input type="text" name="username" value="{{passwords.user_name}}" class="form-input"/>
+         </div>
+         
+         <div class="field">
+            <div>Password</div>
+            <input type="text" name="password" value="{{passwords.saved_password}}" class="form-input"/>
+         </div>
+                 
+         <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Generate new password">
+         </div>
+                  
+         <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" id="save-password" value="Save">
+         </div>
+
+         <div class="field btn">
+            <div class="btn-layer1"></div>
+            <input type="submit" id="delete-btn" value="Delete">
+         </div>
+
+         <div class="field btn">
+            <div class="btn-layer1"></div>
+            <input type="submit" id="cancel-btn" value="Cancel">
+         </div>
+      </form>
+   </div>
+</div>
+
+<script src="/public/js/edit.js"></script>
