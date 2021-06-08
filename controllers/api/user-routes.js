@@ -7,8 +7,6 @@ router.post('/', async (req, res) => {
   try {
     const user = await User.create(req.body);
 
-    console.log(user);
-
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.loggedIn = true;
@@ -16,6 +14,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(user);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
