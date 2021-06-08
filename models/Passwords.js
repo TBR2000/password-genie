@@ -56,10 +56,6 @@ Passwords.init(
                passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
               return passwordData;
             },
-            //afterFind: async (passwordData) => {
-            //  passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
-            //  return passwordData;
-           // },
           },
     sequelize,
     timestamps: true,
