@@ -9,7 +9,7 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: url(genie.jpg);
+  /* background: url(genie.jpg); */
 }
 ::selection{
   background: #5145fa;
