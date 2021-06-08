@@ -22,9 +22,9 @@
                   <div class="form-group">
                      <label for="website">Password</label>
                      <div class="input-group">
-                        <input type="password" class="form-control" aria-label="Password" readonly value="{{password.saved_password}}">
+                        <input type="password" id="passwordEl" class="form-control" aria-label="Password" readonly value="{{password.saved_password}}">
                         <div class="input-group-append">
-                           <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Copy</button>
+                           <button class="btn btn-outline-secondary" id="btnCopyPwd" style="height: 36.5px" type="button">Copy</button>
                            <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Reveal</button>
                         </div>
                      </div>
@@ -38,3 +38,5 @@
             </div>
          </div>
       </div>
+
+      <script src="/js/view.js"></script>
