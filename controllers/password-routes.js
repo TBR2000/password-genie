@@ -1,11 +1,13 @@
  const router = require('express').Router();
- const Passwords = require ('../models');
+ const { Passwords } = require ('../models/');
 
 
 //GET password by ID route (/:id)
 router.get('/:id', async (req, res) => {
   try {
     const passwordData = await Passwords.findByPk(req.params.id);
+    //passwordData.saved_password = passwordData.decryptPassword(passwordData.saved_password);
+    
 
     if (!passwordData) {
       res.status(404).json({ message: 'No Passwords found with this id!' });
