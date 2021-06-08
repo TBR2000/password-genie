@@ -1,5 +1,4 @@
   
- <body>
       <div class="wrapper">
          <div class="title-text">
             <div class="title login">
@@ -10,24 +9,49 @@
         
             <div class="form-inner">
                <form action="#" class="login">
-                   
-                  <div class="field">
-                    <div>Name</div>
-                     <input type="none">
+                  <div class="form-group">
+                     <label for="website">Website</label>
+                     <input type="text" class="form-control" readonly placeholder="website">
                   </div>
-                  <div class="field">
+                  
+                   <div class="form-group">
+                     <label for="website">URL</label>
+                     <input type="text" class="form-control" readonly placeholder="url">
+                  </div>
+
+                  <div class="form-group">
+                     <label for="website">Password</label>
+                     <div class="input-group">
+                        <input type="password" class="form-control" aria-label="Password" readonly>
+                        <div class="input-group-append">
+                           <button class="btn btn-outline-secondary" style="height: 36px" type="button">COPY</button>
+                        </div>
+                     </div>
+                  </div>
+
+                  {{!-- <div class="field">
                       <div>URL</div>
-                     <input type="none">
+                     <input type="text">
                   </div>
-                  <div class="field">
+
+                  <div>Password</div>
+                  <div class="input-group">
+                     <input type="password" class="form-control" aria-label="Password">
+                     <div class="input-group-append">
+                        <button class="btn btn-outline-secondary">COPY</button>
+                     </div>
+                  </div> --}}
+                  
+
+                  {{!-- <div class="field">
                       <div>Password</div>
-                    <input type="none">
+                    <input type="text">
                  </div>
                  
                  <div class="icons">
-                    <i class="fas fa-save text-light save-note"></i></div>
-                 
-                 
+                    <i class="fas fa-save text-light save-note"></i>
+                  </div>
+                  --}}
                   
                   <div class="field btn">
                      <div class="btn-layer"></div>
@@ -42,11 +66,9 @@
 
                   <div class="field btn">
                     <div class="btn-layer"></div>
-                    <input type="submit" value="Return">
+                    <input type="submit" value="Back">
                  </div>
                </form>
             </div>
          </div>
       </div>
-    
-   </body>
