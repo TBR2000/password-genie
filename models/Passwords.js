@@ -4,9 +4,9 @@ const Cryptr = require('cryptr');
 const cryptr = new Cryptr(process.env.KEY);
 
 class Passwords extends Model {
-  decryptPasswords(passwordData) {
-    return cryptr.decrypt(passwordData)
-    }
+  decryptPassword(passwordData) {
+    return cryptr.decrypt(passwordData);
+  }
 }
 
 Passwords.init(

@@ -16,8 +16,12 @@ router.get('/:id', async (req, res) => {
       return;
     }
 
+    const password = passwordData.get({ plain: true });
     // res.status(200).json(passwordData);
-    res.render("view");
+    res.render("view", {
+      password,
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     res.status(500).json(err);
   }

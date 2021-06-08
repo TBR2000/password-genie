@@ -11,63 +11,29 @@
                <form action="#" class="login">
                   <div class="form-group">
                      <label for="website">Website</label>
-                     <input type="text" class="form-control" readonly placeholder="website">
+                     <input type="text" class="form-control" readonly value={{password.website}}>
                   </div>
                   
                    <div class="form-group">
                      <label for="website">URL</label>
-                     <input type="text" class="form-control" readonly placeholder="url">
+                     <input type="text" class="form-control" readonly value={{password.url}}>
                   </div>
 
                   <div class="form-group">
                      <label for="website">Password</label>
                      <div class="input-group">
-                        <input type="password" class="form-control" aria-label="Password" readonly>
+                        <input type="password" class="form-control" aria-label="Password" readonly value="{{password.saved_password}}">
                         <div class="input-group-append">
-                           <button class="btn btn-outline-secondary" style="height: 36px" type="button">COPY</button>
+                           <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Copy</button>
+                           <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Reveal</button>
                         </div>
                      </div>
                   </div>
-
-                  {{!-- <div class="field">
-                      <div>URL</div>
-                     <input type="text">
-                  </div>
-
-                  <div>Password</div>
-                  <div class="input-group">
-                     <input type="password" class="form-control" aria-label="Password">
-                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary">COPY</button>
-                     </div>
-                  </div> --}}
                   
+                  <a class="btn btn-primary btn-lg" href="/edit_password/{{password.id}}">Edit Password</a>
+                  <button class="btn btn-danger btn-lg" href="">Delete Password</button>
+                  <a class="btn btn-primary btn-lg" href="/">Back</a>
 
-                  {{!-- <div class="field">
-                      <div>Password</div>
-                    <input type="text">
-                 </div>
-                 
-                 <div class="icons">
-                    <i class="fas fa-save text-light save-note"></i>
-                  </div>
-                  --}}
-                  
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Edit Password">
-                  </div>
-                  
-                  
-                  <div class="field btn">
-                     <div class="btn-layer1"></div>
-                     <input type="submit" value="Delete Password">
-                  </div>
-
-                  <div class="field btn">
-                    <div class="btn-layer"></div>
-                    <input type="submit" value="Back">
-                 </div>
                </form>
             </div>
          </div>
