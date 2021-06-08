@@ -1,5 +1,5 @@
  const router = require('express').Router();
- const {Passwords} = require ('../models');
+ const Passwords = require ('../models/Passwords');
  const Cryptr = require('cryptr');
  const cryptr = new Cryptr(process.env.KEY);
 
@@ -17,7 +17,6 @@ router.get('/:id', async (req, res) => {
     }
 
     const password = passwordData.get({ plain: true });
-    // res.status(200).json(passwordData);
     res.render("view", {
       password,
       loggedIn: req.session.loggedIn
