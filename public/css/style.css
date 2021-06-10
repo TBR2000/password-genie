@@ -625,3 +625,60 @@ li:hover{
   text-decoration: line-through;
   background-color: #e0e0e0;
 }
+.navbar{
+   
+    margin-left: 200px;
+    margin-bottom: 680px;
+   max-width: 1px;
+   
+  
+    
+  }
+  
+   .navbar .right ul li a{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: 200px;
+    background-color: #0b1168;
+   
+    
+    
+  }
+  
+  
+   .navbar .right a span{
+    font-size: 10px;
+  }
+  
+   .navbar .right ul li{
+    position: relative;
+  }
+  
+   .navbar .right ul li .dropdown{
+    position: absolute;
+    top: 65px;
+    right: 0;
+   
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+   .navbar .right ul li .dropdown .fas{
+    margin-right: 10px;
+  }
+  
+   .navbar .right ul li .dropdown:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .navbar .right ul li.active .dropdown{
+    display: block;
+  }
