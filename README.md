@@ -114,7 +114,8 @@ The application is based on one `passwords_db` database containing two tables na
 ## Future developments
 1. Add a button on the landing page "forget my password" which will send a temporary password recovery link to user's email.
 2. App will notify the user that password has not been changed for more than 6 months. Automatic notification will be sent to users registered email.
-3. Notification hadlebar will be created for notifcation like #2 and other notifications in the future. 
+3. Notification hadlebar will be created for notifcation like #2 and other notifications in the future.
+4. Allow user to search a password on the dashborad.
 
 ## Repo link
 [👋 Password-genie Repo 👋](https://github.com/marora7926/password-genie)
