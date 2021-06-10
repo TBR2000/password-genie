@@ -43,18 +43,23 @@
                   </div>
 
                   <div class="form-group">
+                     <label for="username">Username</label>
+                     <input type="text" class="form-control" readonly value={{password.user_name}}>
+                  </div>
+
+                  <div class="form-group">
                      <label for="website">Password</label>
                      <div class="input-group">
                         <input type="password" id="passwordEl" class="form-control" aria-label="Password" readonly value="{{password.saved_password}}">
                         <div class="input-group-append">
                            <button class="btn btn-outline-secondary" id="btnCopyPwd" style="height: 36.5px" type="button">Copy</button>
-                           <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Reveal</button>
+                           {{!-- <button class="btn btn-outline-secondary" style="height: 36.5px" type="button">Reveal</button> --}}
                         </div>
                      </div>
                   </div>
                   
                   <a class="btn btn-primary btn-lg" href="/edit_password/{{password.id}}">Edit Password</a>
-                  <button class="btn btn-danger btn-lg" href="">Delete Password</button>
+                  <button class="btn btn-danger btn-lg" id="btnDelete">Delete Password</button>
                   <a class="btn btn-primary btn-lg" href="/">Back</a>
 
                </form>
