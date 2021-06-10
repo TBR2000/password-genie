@@ -13,11 +13,17 @@
 </p>
   
 <p align="center">
+    <img src="https://img.shields.io/badge/html-blueviolet" />
+    <img src="https://img.shields.io/badge/css-blue" />
     <img src="https://img.shields.io/badge/Javascript-yellow" />
     <img src="https://img.shields.io/badge/express-orange" />
-    <img src="https://img.shields.io/badge/Sequelize-blue"  />
-    <img src="https://img.shields.io/badge/mySQL-blue"  />
+    <img src="https://img.shields.io/badge/Sequelize-9cf"  />
+    <img src="https://img.shields.io/badge/mySQL-yellowgreen"  />
     <img src="https://img.shields.io/badge/dotenv-green" />
+    <img src="https://img.shields.io/badge/bcrypt-critical" />
+    <img src="https://img.shields.io/badge/cryptr-ff69b4" />
+    <img src="https://img.shields.io/badge/handlerbars-orange" />
+    <img src="https://img.shields.io/badge/shield.io-brightgreen" />   
 </p>
 
 ## Description of the application
@@ -30,7 +36,7 @@ Creating a simple, secure and responsive application that allows a users to gene
 - [Acceptance criteria](#acceptance-criteria)
 - [Contributors](#contributors)
 - [Team work](#team-work)
-- [Packages used](#packages-used)
+- [Packages](#packages)
 - [Models](#models)
 - [Associations](#associations)
 - [Future developments](#future-developments)
@@ -85,16 +91,19 @@ WHEN I choose to delete an existing item THEN the password item is removed from 
 The strong teamwork between our group is what motivated everyone in the group throughout the whole of Project-2. Being supportive of one another and learning from each other was an extremely rewarding part of this project. We could rely on each other and always knew that if we did not understand a particular thing or needed guidance that we were not alone and could depend on each other.
 ```
 
-## Packages used
+## Packages
   * [bcrypt](https://www.npmjs.com/package/bcrypt)
   * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+  * [cryptr](https://github.com/MauriceButler/cryptr)
   * [dotenv](https://www.npmjs.com/package/dotenv)
   * [express](https://www.npmjs.com/package/express)
   * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
   * [express-session](https://www.npmjs.com/package/express-session)
+  * [generate-password](https://github.com/brendanashworth/generate-password)
   * [handlebars](https://www.npmjs.com/package/handlebars)
   * [mysql2](https://www.npmjs.com/package/mysql2)
   * [sequelize](https://www.npmjs.com/package/sequelize)
+  * [shield-io](https://shields.io/)
 
 ## Models
 The application is based on one `passwords_db` database containing two tables namely `user` and `passwords`. See [schema](#screenshots---schema) here.
@@ -103,9 +112,10 @@ The application is based on one `passwords_db` database containing two tables na
 * `Passwords` belongs to `User`, and `User` has many `Password` models, as a user can have multiple password but a password can only belong to one user.
 
 ## Future developments
-```
-Add a button on the landing page "forget my password" which will send a temporary password recovery link to user's email.
-```
+1. Add a button on the landing page "forget my password" which will send a temporary password recovery link to user's email.
+2. App will notify the user that password has not been changed for more than 6 months. Automatic notification will be sent to users registered email.
+3. Notification hadlebar will be created for notifcation like #2 and other notifications in the future.
+4. Allow user to search a password on the dashborad.
 
 ## Repo link
 [👋 Password-genie Repo 👋](https://github.com/marora7926/password-genie)
