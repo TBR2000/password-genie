@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 html,body{
   display: grid;
   height: 100%;
@@ -11,10 +12,12 @@ html,body{
   place-items: center;
   background: url(genie.jpg);
 }
+
 ::selection{
   background: #5145fa;
   color: #fff;
 }
+
 .wrapper{
   overflow: hidden;
   max-width: 390px;
@@ -22,13 +25,14 @@ html,body{
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-  
 }
+
 .wrapper .title-text{
   display: flex;
   width: 205%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .wrapper .title{
   width: 50%;
   font-size: 35px;
@@ -36,6 +40,7 @@ html,body{
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
+
 .wrapper .slide-controls{
   position: relative;
   display: flex;
@@ -47,6 +52,7 @@ html,body{
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
+
 .slide-controls .slide{
   height: 100%;
   width: 100%;
@@ -105,11 +111,13 @@ input[type="radio"]{
   width: 50%;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
+
 .form-inner form .field{
   height: 50px;
   width: 100%;
   margin-top: 10px;
 }
+
 .form-inner form .field input{
   height: 100%;
   width: 100%;
@@ -121,41 +129,49 @@ input[type="radio"]{
   font-size: 17px;
   transition: all 0.3s ease;
 }
+
 .form-inner form .field input:focus{
   border-color: #435ed8;
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
+
 .form-inner form .field input::placeholder{
   color: #999;
   transition: all 0.3s ease;
 }
+
 form .field input:focus::placeholder{
   color: #b3b3b3;
 }
+
 .form-inner form .pass-link{
   margin-top: 5px;
 }
+
 .form-inner form .signup-link{
   text-align: center;
   margin-top: 30px;
 }
+
 .form-inner form .pass-link a,
 .form-inner form .signup-link a{
   color: #435ed8;
   text-decoration: none;
 }
+
 .form-inner form .pass-link a:hover,
 .form-inner form .signup-link a:hover{
   text-decoration: underline;
 }
+
 form .btn{
   height: 50px;
   width: 100%;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  margin-bottom:10px;
 }
+
 form .btn .btn-layer{
   height: 100%;
   width: 300%;
@@ -165,9 +181,11 @@ form .btn .btn-layer{
   border-radius: 5px;
   transition: all 0.4s ease;;
 }
+
 form .btn:hover .btn-layer{
   left: 0;
 }
+
 form .btn input[type="submit"]{
   height: 100%;
   width: 100%;
@@ -183,27 +201,6 @@ form .btn input[type="submit"]{
   cursor: pointer;
 }
 
-
-
-
-::selection{
-  background: #5145fa;
-  color: #fff;
-}
-.wrapper{
-  overflow: hidden;
-  max-width: 390px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-  
-}
-.wrapper .title-text{
-  display: flex;
-  width: 205%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 .wrapper .title{
   width: 50%;
   font-size: 35px;
@@ -211,136 +208,11 @@ form .btn input[type="submit"]{
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.wrapper .slide-controls{
-  position: relative;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  overflow: hidden;
-  margin: 30px 0 10px 0;
-  justify-content: space-between;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-}
-.slide-controls .slide{
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 48px;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.6s ease;
-}
-.slide-controls label.signup{
-  color: #000;
-}
-.slide-controls .slider-tab{
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  left: 0;
-  z-index: 0;
-  border-radius: 5px;
-  background: -webkit-linear-gradient(left, #435ed8, #000000);
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-input[type="radio"]{
-  display: none;
-}
-#signup:checked ~ .slider-tab{
-  left: 50%;
-}
-#signup:checked ~ label.signup{
-  color: #fff;
-  cursor: default;
-  user-select: none;
-}
-#signup:checked ~ label.login{
-  color: #000;
-}
-#login:checked ~ label.signup{
-  color: #000;
-}
-#login:checked ~ label.login{
-  cursor: default;
-  user-select: none;
-}
-.wrapper .form-container{
-  width: 100%;
-  overflow: hidden;
-}
-.form-container .form-inner{
-  display: flex;
-  width: 200%;
-}
-.form-container .form-inner form{
-  width: 50%;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
+
 .form-inner form .field{
   height: 50px;
   width: 100%;
   margin-top: 20px;
-}
-
-
-
-.form-inner form .field input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding-left: 15px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  border-bottom-width: 2px;
-  font-size: 17px;
-  transition: all 0.3s ease;
-}
-.form-inner form .field input:focus{
-  border-color: #435ed8;
-  /* box-shadow: inset 0 0 3px #fb6aae; */
-}
-.form-inner form .field input::placeholder{
-  color: #999;
-  transition: all 0.3s ease;
-}
-form .field input:focus::placeholder{
-  color: #b3b3b3;
-}
-.form-inner form .pass-link{
-  margin-top: 5px;
-}
-.form-inner form .signup-link{
-  text-align: center;
-  margin-top: 30px;
-}
-.form-inner form .pass-link a,
-.form-inner form .signup-link a{
-  color: #435ed8;
-  text-decoration: none;
-}
-.form-inner form .pass-link a:hover,
-.form-inner form .signup-link a:hover{
-  text-decoration: underline;
-}
-form .btn{
-  height: 50px;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-form .btn .btn-layer{
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  background: -webkit-linear-gradient(right, #000000, #060116, #0b1168, #435ed8);
-  border-radius: 5px;
-  transition: all 0.4s ease;;
 }
 
 .btn-layer1{
@@ -350,214 +222,13 @@ form .btn .btn-layer{
   left: -100%;
   background: -webkit-linear-gradient(right, #ff0000, #ff0000, #ff0000, #ff0000);
   border-radius: 5px;
-  transition: all 0.4s ease;;}
-
-
-  
-form .btn:hover .btn-layer{
-  left: 0;
+  transition: all 0.4s ease;
 }
-form .btn input[type="submit"]{
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  background: none;
-  border: none;
-  color: #fff;
-  padding-left: 0;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.icons i {
-    
-   
+ 
+.icons i {  
   margin-left: 300px;
   margin-right: 15px;
   font-size: 1.5rem;
-  cursor: pointer;
-  
-}
-
-
-::selection{
-  background: #5145fa;
-  color: #fff;
-}
-.wrapper{
-  overflow: hidden;
-  max-width: 390px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-  
-}
-.wrapper .title-text{
-  display: flex;
-  width: 205%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.wrapper .title{
-  width: 50%;
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-.wrapper .slide-controls{
-  position: relative;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  overflow: hidden;
-  margin: 30px 0 10px 0;
-  justify-content: space-between;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-}
-.slide-controls .slide{
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 48px;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.6s ease;
-}
-.slide-controls label.signup{
-  color: #000;
-}
-.slide-controls .slider-tab{
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  left: 0;
-  z-index: 0;
-  border-radius: 5px;
-  background: -webkit-linear-gradient(left, #435ed8, #000000);
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-input[type="radio"]{
-  display: none;
-}
-#signup:checked ~ .slider-tab{
-  left: 50%;
-}
-#signup:checked ~ label.signup{
-  color: #fff;
-  cursor: default;
-  user-select: none;
-}
-#signup:checked ~ label.login{
-  color: #000;
-}
-#login:checked ~ label.signup{
-  color: #000;
-}
-#login:checked ~ label.login{
-  cursor: default;
-  user-select: none;
-}
-.wrapper .form-container{
-  width: 100%;
-  overflow: hidden;
-}
-.form-container .form-inner{
-  display: flex;
-  width: 200%;
-}
-.form-container .form-inner form{
-  width: 50%;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-.form-inner form .field{
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-}
-.form-inner form .field input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding-left: 15px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  border-bottom-width: 2px;
-  font-size: 17px;
-  transition: all 0.3s ease;
-}
-
-.form-inner form .field input::placeholder{
-  color: #999;
-  transition: all 0.3s ease;
-}
-form .field input:focus::placeholder{
-  color: #b3b3b3;
-}
-.form-inner form .pass-link{
-  margin-top: 5px;
-}
-.form-inner form .signup-link{
-  text-align: center;
-  margin-top: 30px;
-}
-.form-inner form .pass-link a,
-.form-inner form .signup-link a{
-  color: #435ed8;
-  text-decoration: none;
-}
-.form-inner form .pass-link a:hover,
-.form-inner form .signup-link a:hover{
-  text-decoration: underline;
-}
-form .btn{
-  height: 50px;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-form .btn .btn-layer{
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  background: -webkit-linear-gradient(right, #000000, #060116, #0b1168, #435ed8);
-  border-radius: 5px;
-  transition: all 0.4s ease;;
-}
-
-.btn-layer1{
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  background: -webkit-linear-gradient(right, #696161, #696161, #696161, #696161);
-  border-radius: 5px;
-  transition: all 0.4s ease;;}
-  
-form .btn:hover .btn-layer{
-  left: 0;
-}
-form .btn input[type="submit"]{
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  background: none;
-  border: none;
-  color: #fff;
-  padding-left: 0;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -572,21 +243,23 @@ form .btn input[type="submit"]{
   height: 680px;
   text-align: center;
   font-family: 'Nunito',sans-serif;
- 
 }
+
 h1{
   margin: 12px 0;
 }
+
 .search-elements{
   margin: 12px 0;
   border: rgba(0,0,0,.16);
-  border-radius: 5px;
-  
+  border-radius: 5px; 
 }
+
 input{
   padding: 6px 4px;
   width: 70%;
 }
+
 button{
   padding: 7px 14px;
   background-color: #435ed8;
@@ -595,14 +268,16 @@ button{
   color: #fafafa;
 
 }
+
 .element-list{
   height: 550px;
   overflow-y: scroll
 }
+
 ul{
   padding: 15px;
- 
 }
+
 li{
   list-style: none;
   padding: 15px 25px;
@@ -613,6 +288,7 @@ li{
   transition: .4s;
   text-align: left;
 }
+
 button:hover{
   background-color: #1565c0;
 }
@@ -624,4 +300,189 @@ li:hover{
 .checked{
   text-decoration: line-through;
   background-color: #e0e0e0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 65px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #aec6db;
+  margin: auto;
+  padding: 20px;
+  border: 5px solid rgb(34, 88, 212);
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #ee1414;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main{
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*top part*/
+.top{
+  width: 80%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top1 { 
+  width: 50%;
+  height: 50%;
+  margin-left: 75%;
+}
+
+#output{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #435ed8;
+  overflow-x: hidden;
+  border-radius: 5px;
+  border:dotted;
+  outline: dotted;
+  margin-top: 5%;  
+}
+
+.top1 button{
+  width: 10%;
+  height: 30%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-left: 2%;
+  margin-top: 15%;
+}
+
+.top button{
+  width: 10%;
+  height: 30%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background: #F1C40F;
+  border-radius: 5px;
+  margin-left: 2%;
+  margin-top: 3%;
+}
+
+#char_num {
+  width: 10%;
+  height: 30%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  background: #435ed8;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+/* detail part */
+.detail{
+  width: 10%;
+  margin-top: 3%;
+}
+
+.detail p{
+  color: #000;
+  margin: 0 5px;
+}
+
+/*password_generate button*/
+#password_generate{
+  width: 30%;
+  height: 30%;
+  cursor: pointer;
+  border: none;
+  font-size: 30px;
+  outline: none;
+  background: #435ed8;
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+
+/*checkbox options */
+.options{
+  width: 40%;
+}
+
+.options ul li{
+  margin: 10px 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.options ul li:hover{
+    background: #000000;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+
+.options ul li #icon{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.options ul li label:not(:last-child){
+  width: 95%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color:#ffffff;
+  padding: 0 0 0 10px;
+}
+
+input[type=checkbox]:checked ~ #icon{
+  background: #F1C40F;
 }
