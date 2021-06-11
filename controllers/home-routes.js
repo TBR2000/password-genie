@@ -18,6 +18,20 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/add_new', withAuth, async (req, res) => {
+  try {
+    const passwordData = await Passwords.findAll({where: { user_id: req.session.userId }});
+    const passwords = passwordData.map((password) => password.get({ plain: true }));
+    res.render('new-form', 
+      { 
+        loggedIn: req.session.loggedIn 
+      }
+    );
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/edit_password/:id', withAuth, async (req, res) => {
   try {
     const passwordData = await Passwords.findByPk(req.params.id);

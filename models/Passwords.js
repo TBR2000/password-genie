@@ -52,8 +52,8 @@ Passwords.init(
               passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
               return passwordData;
             },
-            beforeUpdate: async (passwordData) => {
-               passwordData.saved_password = await cryptr.encrypt(passwordData.saved_password);
+            beforeBulkUpdate: async (passwordData) => {
+              passwordData.attributes.saved_password = await cryptr.encrypt(passwordData.attributes.saved_password);
               return passwordData;
             },
           },

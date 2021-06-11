@@ -9,7 +9,7 @@
 router.get('/:id', async (req, res) => {
   try {
     const passwordData = await Passwords.findByPk(req.params.id);
-    passwordData.saved_password = await cryptr.decrypt(passwordData.saved_password);
+    passwordData.saved_password = await passwordData.decryptPassword(passwordData.saved_password);
     
     if (!passwordData) {
       res.status(404).json({ message: 'No Passwords found with this id!' });
@@ -22,6 +22,7 @@ router.get('/:id', async (req, res) => {
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -44,12 +45,14 @@ router.put('/:id', async (req,res) => {
         id: req.params.id,
       },
     });
+    
     if (!passwordData[0]) {
       res.status(404).json({ message: 'No Passwords with this id!' });
       return;
     }
     res.status(200).json(passwordData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -57,6 +60,7 @@ router.put('/:id', async (req,res) => {
 //DELETE password route (/:id)
 router.delete('/:id', async (req,res) => {
   try {
+    console.log("HERE");
     const passwordData = await Passwords.destroy({
       where: {
         id: req.params.id
@@ -70,6 +74,7 @@ router.delete('/:id', async (req,res) => {
 
     res.status(200).json(passwordData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
