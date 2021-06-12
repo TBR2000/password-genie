@@ -1,9 +1,5 @@
  const router = require('express').Router();
  const Passwords = require ('../models/Passwords');
- const Cryptr = require('cryptr');
- const cryptr = new Cryptr(process.env.KEY);
-
-
 
 //GET password by ID route (/:id)
 router.get('/:id', async (req, res) => {
@@ -30,9 +26,11 @@ router.get('/:id', async (req, res) => {
 //Add new password route (POST) (/)
 router.post('/', async (req,res) => {
     try {
+        req.body.user_id = req.session.userId;
         const passwordData = await Passwords.create(req.body);
         res.status(200).json(passwordData);
-    } catch {
+    } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });

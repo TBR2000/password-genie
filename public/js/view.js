@@ -15,7 +15,7 @@ const deleteClickHandler = async (e) => {
 
     const url = window.location.href;
     const passwordId = url.split('/').pop();
-    await fetch(`/passwords/${passwordId}`, {
+    const response = await fetch(`/passwords/${passwordId}`, {
         method: 'DELETE'
     });
 

@@ -7,8 +7,6 @@ const editFormHandler = async function (event) {
     const saved_password = document.querySelector('#password').value;
 
     const passwordId = document.querySelector('#pwdId').value
-    console.log(passwordId);
-
     const response = await fetch(`/passwords/${passwordId}`, {
         method: 'PUT',
         body: JSON.stringify({

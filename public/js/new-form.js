@@ -1,17 +1,17 @@
-const newFormHandler = async function (event) {
+const newFormHandler = async (event) => {
     event.preventDefault();
-    const website = document.querySelector('input[name="website"]').value;
-    const url = document.querySelector('input[name="url"]').value;
-    const username = document.querySelector('input[name="user_name"]').value;
-    const password = document.querySelector('input[name="password"]').value;
+    const website = document.querySelector('#website').value;
+    const url = document.querySelector('#url').value;
+    const user_name = document.querySelector('#username').value;
+    const saved_password = document.querySelector('#password').value;
 
-    await fetch(`/api/new`, {
+    const response = await fetch(`/passwords`, {
         method: 'POST',
         body: JSON.stringify({
             website,
             url,
-            username,
-            password
+            user_name,
+            saved_password
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -25,25 +25,6 @@ const newFormHandler = async function (event) {
       }
 };
 
-const deleteClickHandler = async function () {
-    await fetch(`/api/passwords/${passwordId}`, {
-        method: 'DELETE'
-    });
-
-    if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert(response.statusText);
-      }
-};
-
-const cancelClickHandler = async function () {
-    document.location.replace('/');
-};
-
 document
-    .querySelector("#new-entry-form")
-    .addEventListener('submit', newFormHandler);
-document
-    .querySelector("#cancel-btn")
-    .addEventListener('click', cancelClickHandler);
+    .querySelector("#save-password")
+    .addEventListener('click', newFormHandler);
