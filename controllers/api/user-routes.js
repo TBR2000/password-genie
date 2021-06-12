@@ -10,6 +10,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.loggedIn = true;
+      req.session.username = user.username;
 
       res.status(200).json(user);
     });
@@ -51,6 +52,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.loggedIn = true;
+      req.session.username = user.username;
       
       res.json({ user, message: 'You are now logged in!' });
     });
@@ -62,7 +64,8 @@ router.post('/login', async (req, res) => {
 
 // Logout - if user is signed in, destroy session. Else, throw 404?
 router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
+  console.log("LOGOUT");
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });

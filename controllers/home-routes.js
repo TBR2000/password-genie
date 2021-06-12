@@ -10,7 +10,8 @@ router.get('/', withAuth, async (req, res) => {
     res.render('passwords', 
       { 
         passwords, 
-        loggedIn: req.session.loggedIn 
+        loggedIn: req.session.loggedIn, 
+        username: req.session.username
       }
     );
   } catch (err) {
@@ -25,7 +26,8 @@ router.get('/add_new', withAuth, async (req, res) => {
     res.render('new-form', 
       { 
         password: {website: "", url: "", user_name: "", saved_password: "" }, 
-        loggedIn: req.session.loggedIn 
+        loggedIn: req.session.loggedIn,
+        username: req.session.username,
       }
     );
   } catch (err) {
@@ -46,7 +48,8 @@ router.get('/edit_password/:id', withAuth, async (req, res) => {
     const password = passwordData.get({ plain: true });
     res.render("edit", {
       password,
-      loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
+      username: req.session.username
     });
   } catch (err) {
     console.log(err);
