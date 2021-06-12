@@ -232,7 +232,7 @@ form .btn input[type="submit"]{
   transform: translate(-50%,-50%);
   background-color: #fafafa;
   box-shadow: 0 2px 8px rgba(0,0,0,.16);
-  width: 450px;
+  width: 650px;
   max-width: 95%;
   height: 95%;
   text-align: center;
@@ -301,7 +301,7 @@ li:hover{
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 65px; 
+  padding-top: 20px; 
   left: 0;
   top: 0;
   width: 100%;
@@ -323,10 +323,11 @@ li:hover{
 /* The Close Button */
 .close {
   color: #ee1414;
-  float: right;
+  text-align: right;
   font-size: 28px;
   font-weight: bold;
   padding-top: 5px;
+  width: 100%;
 }
 
 .close:hover,
@@ -413,37 +414,22 @@ li:hover{
 
 /* detail part */
 .detail{
-  width: 10%;
   margin-top: 3%;
-}
-
-.detail p{
-  color: #000;
-  margin: 0 5px;
 }
 
 /*password_generate button*/
 #password_generate{
-  width: 30%;
-  height: 30%;
-  cursor: pointer;
-  border: none;
-  font-size: 30px;
-  outline: none;
-  background: #435ed8;
-  border-radius: 5px;
-  margin-bottom: 1%;
+  width: 70%;
 }
 
 /*checkbox options */
 .options{
-  width: 40%;
+  width: 60%;
 }
 
 .options ul li{
   margin: 10px 0;
   width: 100%;
-  height: 40px;
   display: flex;
   align-items: center;
   padding: 0 5px;
@@ -472,7 +458,6 @@ input[type=checkbox]{
   display: flex;
   align-items: center;
   text-transform: capitalize;
-  font-size: 20px;
   color:#ffffff;
   padding: 0 0 0 10px;
 }
