@@ -144,8 +144,8 @@ body{
   align-items: center;
   padding: 0 5px;
   background-color: #000000;
-  border-radius: 5px;
-  
+  color:#ffffff;
+  border-radius: 5px;  
 }
 .options ul li:hover{
     background: #000000;
