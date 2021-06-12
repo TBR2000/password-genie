@@ -1,8 +1,9 @@
  const router = require('express').Router();
  const Passwords = require ('../models/Passwords');
+ const withAuth = require('../utils/auth');
 
 //GET password by ID route (/:id)
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const passwordData = await Passwords.findByPk(req.params.id);
     passwordData.saved_password = await passwordData.decryptPassword(passwordData.saved_password);
@@ -25,7 +26,7 @@ router.get('/:id', async (req, res) => {
 });
 
 //Add new password route (POST) (/)
-router.post('/', async (req,res) => {
+router.post('/', withAuth, async (req,res) => {
     try {
         req.body.user_id = req.session.userId;
         const passwordData = await Passwords.create(req.body);
@@ -37,7 +38,7 @@ router.post('/', async (req,res) => {
 });
 
 //Modify password route (PUT) (/:id)
-router.put('/:id', async (req,res) => {
+router.put('/:id', withAuth, async (req,res) => {
   try {
     const passwordData = await Passwords.update(req.body, {
       where: {
@@ -57,7 +58,7 @@ router.put('/:id', async (req,res) => {
 });
 
 //DELETE password route (/:id)
-router.delete('/:id', async (req,res) => {
+router.delete('/:id', withAuth, async (req,res) => {
   try {
     console.log("HERE");
     const passwordData = await Passwords.destroy({
