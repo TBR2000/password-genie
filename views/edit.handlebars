@@ -6,36 +6,9 @@
    </div>
         
    <div class="form-inner">
-      <form action="#" class="login">
+      <form action="#" class="edit">
          <input type="hidden" name="password_id" id="pwdId" value="{{password.id}}"/>
-         
-         <div class="form-group">
-            <label for="website">Website</label>
-            <input type="text" class="form-control" id="website" value={{password.website}}>
-         </div>
-         
-         <div class="form-group">
-            <label for="url">URL</label>
-            <input type="text" class="form-control" id="url" value={{password.url}}>
-         </div>
-
-         <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" value={{password.user_name}}>
-         </div>
-
-         <div class="form-group">
-            <label for="username">Password</label>
-            <input type="password" class="form-control" id="password" value={{password.saved_password}}>
-         </div>
-                 
-         <div class="field btn">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Generate new password">
-         </div>
-                  
-         <button class="btn btn-primary btn-lg" id="save-password">Save</button>
-         <a class="btn btn-secondary btn-lg" href="/">Back</a>
+            {{> password-form-fields}}
       </form>
    </div>
 </div>

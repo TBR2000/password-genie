@@ -170,6 +170,7 @@ form .btn{
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 form .btn .btn-layer{
