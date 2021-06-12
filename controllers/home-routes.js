@@ -21,8 +21,6 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/add_new', withAuth, async (req, res) => {
   try {
-    // const passwordData = await Passwords.findAll({where: { user_id: req.session.userId }});
-    // const passwords = passwordData.map((password) => password.get({ plain: true }));
     res.render('new-form', 
       { 
         password: {website: "", url: "", user_name: "", saved_password: "" }, 
