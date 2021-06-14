@@ -5,6 +5,7 @@ const { Op } = require("sequelize");
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
+    
     const user = await User.create(req.body);
 
     req.session.save(() => {
@@ -50,6 +51,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
+      console.log(res, req)
       req.session.userId = user.id;
       req.session.loggedIn = true;
       req.session.username = user.username;
