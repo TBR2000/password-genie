@@ -1,9 +1,5 @@
-/*output show*/
-const output = document.querySelector('output');
-/*password character num*/
-const pass_num = document.querySelector('#char_num').value;
+const randomPassword = async () => {
 //password variables
-const strength = document.querySelector('#strength').value;
 const length= document.querySelector('#char_num').value;
 const numbers= document.querySelector('#numCheck').value;
 const symbols= document.querySelector('#symCheck').value;
@@ -11,9 +7,6 @@ const lowercase= document.querySelector('#smCheck').value;
 const uppercase= document.querySelector('#capCheck').value;
 const strict= document.querySelector('#strict').value;
 
-
-
-const randomPassword = async () => {
     const response = await fetch('/api/password/generating', {
         method: 'POST',
         body: JSON.stringify({ 
@@ -27,22 +20,24 @@ const randomPassword = async () => {
       });  
       if (response.ok) {
         //response()
-        console.log(res)
       } else {
         alert(response.statusText);
       }
-    
-    console.log(lowercase)
+      //console.log(response)
+    //console.log(lowercase)
 }
-
-    
+   
   
 const response = async () => {
+   /*output show*/
+const output = document.querySelector('#password');
+const strength = document.querySelector('#strength').value;
+
     const password = await fetch ('/api/generator', {
         method: 'GET',
         body: JSON.stringify (password),
         headers: { 'Content-Type': 'application/json' },
-    });
+      });
     
    /* final password */
     output.value = password;
@@ -68,15 +63,15 @@ const response = async () => {
 
 /*password generate*/
 function generate() {
-   
+  const pass_num = document.querySelector('#char_num').value;
 if (pass_num > 0) {
   randomPassword();
     } 
 }
 
-
 /*copy password*/
 const copyFunction = (event) => {
+  const output = document.querySelector('#output');
     event.preventDefault();
     output.select();
     output.setSelectionRange(0, 99999)
