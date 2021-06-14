@@ -4,7 +4,7 @@ const editFormHandler = async function (event) {
     const website = document.querySelector('#website').value;
     const url = document.querySelector('#url').value;
     const user_name = document.querySelector('#username').value;
-    const saved_password = document.querySelector('#password').value;
+    const saved_password = document.querySelector('#passwordsave').value;
 
     const passwordId = document.querySelector('#pwdId').value
     const response = await fetch(`/passwords/${passwordId}`, {
