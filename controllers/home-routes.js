@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const Passwords = require ('../models/Passwords');
+const { Passwords } = require ('../models');
 
 
 //GET(/) -- gets a list of passwords for the signed in user. User must be logged in

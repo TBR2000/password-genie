@@ -1,5 +1,5 @@
  const router = require('express').Router();
- const Passwords = require ('../models/Passwords');
+ const { Passwords } = require ('../models');
  const withAuth = require('../utils/auth');
 
 //GET password by ID route (/:id)
