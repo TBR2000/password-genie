@@ -40,11 +40,11 @@ Creating a simple, secure and responsive application that allows a users to gene
 - [Models](#models)
 - [Associations](#associations)
 - [Future developments](#future-developments)
+- [Presentation link](#presentation-link)
 - [Repo link](#repo-link)
-- [Deployed link](#deployed-link)
+- [HEROKU Deployed link](#heroku-deployed-link)
 - [Wireframe](#wireframe)
 - [Screenshots - Schema](#screenshots---schema)
-- [Screenshots](#screenshots)
 
 ## User story
 ``` 
@@ -65,20 +65,16 @@ WHEN I enter registered username and password THEN I am taken to the user dashbo
 
 GIVEN I have an account in the password genie app
 WHEN log in THEN I am presented with a dashboard
-AND I have the option to create a new password item, edit an existing password and delete an existing password.
+AND I have the option to create a new item, view an exisitng item, edit an existing item and delete an existing item.
 
-GIVEN I have logged in to the password genie app
-WHEN I choose to create a new password item THEN I am presented with a form
-AND I need to enter a name, a username and auto-generate a password
-WHEN I submit the form THEN I am taken back to the dashboard and I can see my newly created password item
-
-GIVEN I have logged in to the password genie app
+GIVEN I have logged in to the password genie app,
+WHEN I choose to create a new item THEN I am presented with a form.
+AND I need to enter a website name, url of website, username and type a password or generate a password using a modal with different user requirement.
+WHEN I submit the form THEN I am taken back to the dashboard and I can see my newly created item.
 WHEN I choose to edit an existing item THEN I am presented with a pre-filled form with existing data
-AND I can edit the name, username, and generate a new password
-WHEN I submit the form THEN I am taken back to the dashboard and I can see my updated password item
-
-GIVEN I have logged in to the password genie app
-WHEN I choose to delete an existing item THEN the password item is removed from the dashboard
+AND I can edit the website name, url of website, username and type or generate a new password using a modal with different user requirement
+WHEN I submit the form THEN I am taken back to the dashboard and I can see my updated password item.
+WHEN I choose to delete an existing item THEN the password item is removed from the dashboard.
 ```
 ## Contributors
 1. [Diana Keosswanto](https://github.com/dianakoeswanto)
@@ -109,28 +105,30 @@ The strong teamwork between our group is what motivated everyone in the group th
 The application is based on one `passwords_db` database containing two tables namely `user` and `passwords`. See [schema](#screenshots---schema) here.
 
 ## Associations
-* `Passwords` belongs to `User`, and `User` has many `Password` models, as a user can have multiple password but a password can only belong to one user.
+* `Passwords` belongs to a `User`, and a `User` has many `Password` models, as a user can have multiple passwords but a password can only belong to one user.
 
 ## Future developments
-1. Add a button on the landing page "forget my password" which will send a temporary password recovery link to user's email.
-2. App will notify the user that password has not been changed for more than 6 months. Automatic notification will be sent to users registered email.
-3. Notification hadlebar will be created for notifcation like #2 and other notifications in the future.
-4. Allow user to search a password on the dashborad.
+  1. Add a button on the landing page "forgot my password" which will send a temporary password recovery link to user's email.
+  2. App will notify the user that password has not been changed for more than 6 months. 
+  3. Automatic notification will be sent to users registered email.
+  4. Notification handlebar will be created for notification like above points and so on.
+  5. Allow users to search a password on their dashboard.
+  6. Finding a more secure way to encrypting the database.
+  7. Add a reveal icon 👁️ to display the password unhashed.
+
+## Presentation link
+[👋 Password-genie Presentation 👋](https://cloudstor.aarnet.edu.au/plus/s/kbKe2OGZ0js3jDp)
 
 ## Repo link
 [👋 Password-genie Repo 👋](https://github.com/marora7926/password-genie)
 
-## Deployed link
-[🎥 Password-genie Application 🎥](https://github.com/marora7926/password-genie)
+## HEROKU Deployed link
+[🎥 Password-genie Application 🎥](https://password-genie.herokuapp.com)
 
 ## Wireframe
 ![Screenshot-password-genie](./public/images/wireframe.png)
 
 ## Screenshots - Schema
 ![Screenshot-models-schema](./public/images/models_schema.png)
-
-## Screenshots
-![Screenshot-landing-page](./public/images/xyz.png)
-
 - - -
 © 2021 Bootcamp students. Confidential and Proprietary. All Rights Reserved
