@@ -40,9 +40,9 @@ Creating a simple, secure and responsive application that allows a users to gene
 - [Models](#models)
 - [Associations](#associations)
 - [Future developments](#future-developments)
-- [Presentation link](#presentation-link)
-- [Repo link](#repo-link)
-- [HEROKU Deployed link](#heroku-deployed-link)
+- [Presentation link:](#presentation-link)
+- [Repo link:](#repo-link)
+- [HEROKU Deployed link:](#heroku-deployed-link)
 - [Wireframe](#wireframe)
 - [Screenshots - Schema](#screenshots---schema)
 
@@ -116,13 +116,13 @@ The application is based on one `passwords_db` database containing two tables na
   6. Finding a more secure way to encrypting the database.
   7. Add a reveal icon 👁️ to display the password unhashed.
 
-## Presentation link
+## Presentation link:
 [👋 Password-genie Presentation 👋](https://cloudstor.aarnet.edu.au/plus/s/kbKe2OGZ0js3jDp)
 
-## Repo link
+## Repo link:
 [👋 Password-genie Repo 👋](https://github.com/marora7926/password-genie)
 
-## HEROKU Deployed link
+## HEROKU Deployed link:
 [🎥 Password-genie Application 🎥](https://password-genie.herokuapp.com)
 
 ## Wireframe
