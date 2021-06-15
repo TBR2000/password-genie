@@ -111,10 +111,12 @@ The application is based on one `passwords_db` database containing two tables na
   1. Add a button on the landing page "forgot my password" which will send a temporary password recovery link to user's email.
   2. App will notify the user that password has not been changed for more than 6 months. 
   3. Automatic notification will be sent to users registered email.
-  4. Notification handlebar will be created for notification like above points and so on.
-  5. Allow users to search a password on their dashboard.
+  4. Users inputs will be validated.
+  5. Allow user to search a password on the dashboard.
   6. Finding a more secure way to encrypting the database.
-  7. Add a reveal icon 👁️ to display the password unhashed.
+  7. Add a reveal icon to display the password.
+  8. URL click will direct to the website and auto-fill username and password.
+
 
 ## Presentation link:
 [👋 Password-genie Presentation 👋](https://cloudstor.aarnet.edu.au/plus/s/kbKe2OGZ0js3jDp)
