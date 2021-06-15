@@ -2,6 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const Passwords = require ('../models/Passwords');
 
+
 //GET(/) -- gets a list of passwords for the signed in user. User must be logged in
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -21,6 +22,7 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/add_new', withAuth, async (req, res) => {
   try {
+
     res.render('new-form', 
       { 
         password: {website: "", url: "", user_name: "", saved_password: "" }, 

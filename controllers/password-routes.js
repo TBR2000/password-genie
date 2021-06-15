@@ -5,6 +5,7 @@
 //GET password by ID route (/:id)
 router.get('/:id', withAuth, async (req, res) => {
   try {
+    console.log(req)
     const passwordData = await Passwords.findByPk(req.params.id);
     passwordData.saved_password = await passwordData.decryptPassword(passwordData.saved_password);
     
