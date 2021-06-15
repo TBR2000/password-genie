@@ -4,12 +4,12 @@ const generator = require('generate-password');
 router.post ('/generating', (req,res) => {
 try{
   const password = generator.generate({
-    length: `${req.body.length}`,
-    numbers: `${req.body.numbers}`,
-    symbols: `${req.body.symbols}`,
-    lowercase: `${req.body.lowercase}`,
+    length: req.body.length,
+    numbers: req.body.numbers,
+    symbols: req.body.symbols,
+    lowercase: req.body.lowercase,
     uppercase: true,
-    strict: `${req.body.strict}`
+    strict: req.body.strict
   });
   console.log(password)
   res.status(200).json(password);
